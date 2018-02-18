@@ -16,3 +16,15 @@ difference between fr, % and auto;
 2 elephants in the room. IE and Edge.
 
 responsive != looking the same.
+
+can't animate
+
+NOT PINTEREST LIKE LAYOUT
+
+Need to touch on some impossible layouts like 
+
+header header header
+title title something
+else content content
+else contetn content
+footer footer footer
