@@ -1,5 +1,70 @@
-.home {
-	padding: 56px 20px;
-	min-height: 100%;
-	width: 100%;
+main.shop {
+  display: grid;
+  grid-template-rows: 80px auto;
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-gap: 10px;
+  justify-content: center;
+
+  max-width: 1600px;
+  margin: 56px auto;
 }
+
+.title {
+  grid-column: 1 / -1;
+
+  font-weight: 900;
+  font-style: italic;
+}
+
+.product {
+  display: grid;
+  grid-template-areas:
+    'img   img   img'
+    'title title title'
+    'dsc   dsc   dsc'
+    'price buy   buy';
+  grid-template-columns: 1fr 1fr 1fr;
+
+  border: solid 1px;
+  border-radius: 2px;
+  background: white;
+}
+
+.img {
+  grid-area: img;
+
+  width: 100%;
+}
+
+.name {
+  grid-area: title;
+
+  margin-bottom: 0;
+}
+
+.description {
+  grid-area: dsc;
+}
+
+.price {
+  grid-area: price;
+  align-self: center;
+  justify-self: center;
+
+  font-weight: 700;
+}
+
+.button {
+  grid-area: buy;
+
+  border: 1px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.name,
+.description {
+  padding: 0 10px;
+}
+

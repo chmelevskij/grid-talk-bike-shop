@@ -19,28 +19,27 @@ let ids = [
 ];
 
 const Bike = ({id}) => (
-    <div class="product">
-      <img class="product__img" src={`https://source.unsplash.com/${id}/500x300`} alt="" />
-      <h2 class="product__title">Nice Bike Bro</h2>
-      <p class="product__description">
-        Lorem magni elit asperiores accusantium iste? Aliquam blanditiis
-        voluptas voluptas doloremque nam itaque. Quidem deleniti beatae odit
-        recusandae eum? Totam voluptates ipsam deleniti molestiae id vero!
-        Ratione vel id vel.
-      </p>
-      <span class="product__price">£500.0</span>
-    </div>
-  );
+  <div class={style.product}>
+    <img
+      class={style.img}
+      src={`https://source.unsplash.com/${id}/500x300`}
+      alt=""
+    />
+    <h2 class={style.name}>Nice Bike Bro</h2>
+    <p class={style.description}>
+      Lorem magni elit asperiores accusantium iste? Aliquam blanditiis voluptas
+      voluptas doloremque nam itaque.
+    </p>
+    <span class={style.price}>£500.0</span>
+    <button class={style.button}>BUY</button>
+  </div>
+);
 
-export default class Home extends Component {
-  render() {
-    return (
-      <main class={style.home}>
-        <h1>Buy a bike</h1>
-        {
-          ids.map(id => <Bike id={id} />)
-        }
-      </main>
-    );
-  }
-}
+const Home = () => (
+  <main class={style.shop}>
+    <h1 class={style.title}>SHOP</h1>
+    {ids.map(id => <Bike id={id} />)}
+  </main>
+);
+
+export default Home;
