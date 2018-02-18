@@ -1,0 +1,12 @@
+{
+  "name": "grid-talk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 9876 --browser 'FirefoxDeveloperEdition'"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}
