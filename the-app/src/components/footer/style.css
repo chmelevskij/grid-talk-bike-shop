@@ -1,0 +1,142 @@
+footer {
+  display: grid;
+  grid-template-rows: 80px 300px;
+  grid-template-areas:
+    'header header header header header header'
+    'c1     c2     c3     c4     signup signup'
+    'c1     c2     c3     c4     trust  trust'
+    'cp     cp     cp     cp     cp     cp';
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
+  justify-self: center;
+
+  color: black;
+  font-family: 'Yesteryear', cursive;
+  text-decoration: none;
+}
+
+li {
+  position: relative;
+}
+
+.links,
+.trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon {
+  width: 32px;
+  margin: 5px 10px;
+}
+
+.form {
+  grid-area: signup;
+}
+
+.form input {
+  border: 2px solid;
+  padding: 0.5rem;
+}
+
+.trust {
+  display: flex;
+  align-items: center;
+  grid-area: trust;
+  justify-content: space-around;
+}
+
+.cp {
+  grid-area: cp;
+  justify-self: start;
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-rows: 80px 140px auto auto 50px;
+    grid-template-areas:
+      'header header header header'
+      'e1     main   c5     signup'
+      'e1     about  c5     cs    '
+      'social social social social'
+      'trust  trust  trust  trust '
+      'cp     cp     cp     cp    ';
+    justify-items: initial;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .cs {
+    grid-area: cs;
+  }
+
+  .social {
+    grid-area: social;
+    justify-self: stretch;
+
+    justify-content: space-evenly;
+    display: flex;
+  }
+
+  /* hidding */
+  .socialIcon ~ span {
+    display: none;
+  }
+
+  .social li:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    grid-template-rows: auto;
+    grid-template-areas:
+      'header'
+      'signup'
+      'social'
+      'main'
+      'about'
+      'cs'
+      'trust'
+      'cp';
+    justify-items: center;
+    grid-gap: 10px;
+  }
+
+  form h2 {
+    text-align: center;
+  }
+
+  .about li:first-child::after,
+  .main li:first-child::after,
+  .cs li:first-child::after {
+    position: absolute;
+    content: '+';
+    font-size: 2rem;
+    right: -21px;
+    top: -4px;
+  }
+
+  .about li ~ li,
+  .main li ~ li,
+  .cs li ~ li {
+    display: none;
+  }
+}

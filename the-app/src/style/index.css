@@ -19,5 +19,15 @@ html, body {
 
 #app {
 	height: 100%;
+  display: grid;
+  grid-template-rows: 56px auto 200px;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  justify-content: center;
 }
 
+header { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }

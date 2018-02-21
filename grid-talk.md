@@ -28,3 +28,9 @@ title title something
 else content content
 else contetn content
 footer footer footer
+
+`grid-area` works only on direct children, imagine `>` selector.
+
+you can place multiple items into the same grid area
+
+using grid-area gotcha. If some of the items don't have grid area assign we get Peter griffin

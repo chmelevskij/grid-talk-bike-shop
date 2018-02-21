@@ -1,12 +1,13 @@
 main.shop {
   display: grid;
   grid-template-rows: 80px auto;
+  grid-auto-rows: 400px;
   grid-template-columns: repeat(auto-fit, 280px);
   grid-gap: 10px;
   justify-content: center;
 
   max-width: 1600px;
-  margin: 56px auto;
+  width: 95vw;
 }
 
 .title {
@@ -66,4 +67,5 @@ main.shop {
   padding: 0.5em;
   font-weight: 900;
   font-size: medium;
+  background: #faf;
 }
