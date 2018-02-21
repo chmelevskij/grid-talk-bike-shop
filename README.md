@@ -1,5 +1,7 @@
 # the-app
 
+Little demo for Glasgow-js.
+
 ## CLI Commands
 
 ``` bash
